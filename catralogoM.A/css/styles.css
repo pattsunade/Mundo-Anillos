@@ -1,0 +1,121 @@
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+.title {
+  margin-top: 50px;
+}
+
+body{
+  background: url(../imagenes/Post\ Mundo\ Anillos-03.jpg) #ccc no-repeat;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+  
+}
+h2{
+  margin: 0;
+  font-size: 2em;
+  text-align: center;
+  margin-top: -10px;
+  font-family: 'Quicksand', sans-serif;
+  
+  
+}
+h3{
+  margin: 0;
+  margin-top: 10px;
+}
+p{
+  margin-top: 20px;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.container{
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4em;
+  margin-bottom: 3em;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+}
+
+.item{
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.095);
+  transition: all 300ms;
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.item::after {
+  content: "";
+  background-color: rgba(179, 229, 252, .1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  transform: scale(0);
+  transition: all 300ms;
+  opacity: 0;
+}
+
+.item:hover:after{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item-text{
+  padding: 1em;
+}
+
+
+.item-img{
+  max-width: 100%;
+  display: block;
+}
+
+
+@media screen and (min-width: 590px) {
+
+  .container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+
+@media screen and (min-width: 960px) {
+
+  .container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+} 
+
+.item-code {
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
